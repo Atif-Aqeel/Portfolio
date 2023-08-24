@@ -178,11 +178,12 @@ html {
 }
 
 /* favicon id */
-#icon-style {
+.icon-style {
     font-size: 1.2rem;
     padding: 1.1rem;
     cursor: pointer;
 }
+
 
 /* Horizontal Ruler Used in Footer*/
 .hr {
