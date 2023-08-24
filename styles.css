@@ -148,7 +148,7 @@ html {
     font-size: 2.3rem;
 }
 
-
+/* Contact Section Styling*/
 .contact {
     color: white;
     text-align: center;
@@ -198,12 +198,13 @@ html {
     cursor: pointer;
 }
 
-/* Horizontal Ruler */
+/* Horizontal Ruler Used in Footer*/
 .hr {
     width: 13rem;
     text-align: center;
 }
 
+/* Horizontal Ruler Used in Project Section */
 .hr2 {
     width: 90%;
     max-width: 65rem;
