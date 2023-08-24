@@ -1,0 +1,245 @@
+/* This will set background color of whole page */
+html {
+    background-color: #bfecde;
+}
+
+/* Set font for just name  */
+.name {
+    color: #2F574A;
+    cursor: pointer;
+}
+
+/* Set Font */
+.div {
+    align-items: left;
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-right: 2rem;
+    font-size: 1rem;
+}
+
+/* div2 for alternative of div (opposite changes)*/
+.div2 {
+    align-items: center;
+    margin: 3.7rem 2rem;
+    background-color: #2F574A;
+    border-radius: 1.1rem;
+    border-bottom-left-radius: 0.3rem;
+    box-shadow: 0 0 10rem rgba(124, 230, 224, 0.5);
+    clip-path: polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
+}
+
+/* Button Class */
+.button {
+    background-color: #bfecde;
+    border-color: #2F574A;
+    border-radius: 0.7rem;
+    color: #2F574A;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* button2 opposite of button (opposite changes) */
+.button2 {
+    background-color: #2F574A;
+    border-color: white;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.4rem 1rem;
+    /* margin: 0.3rem; */
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* styling of image used in About Section */
+.about-img {
+    /* use relative width*/
+    /* Using the width Property: If the CSS width property is set to 100%,
+        the image will be responsive and scale up and down: */
+    /* If the max-width property is set to 100%,
+            the image will scale down if it has to,
+            but never scale up to be larger than its original size: */
+    width: 100%;
+    max-width: 16rem;
+    height: auto;
+    margin: 3rem auto;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* styling of image used in Project Section */
+.project-img {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    margin: 3rem auto;
+    margin-right: 5rem;
+}
+
+/* About Section */
+.about {
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.3rem;
+}
+
+/* flex */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 1rem;
+    margin-bottom: 3rem;
+}
+
+.flex-item-left {
+    padding: 10px;
+    /* flex: 50%; */
+}
+
+.flex-item-right {
+    padding: 10px;
+    flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+/* @media (max-width: 800px) {
+
+    .flex-item-right,
+    .flex-item-left {
+        flex: 100%;
+    }
+} */
+
+.flex-container-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* formatting About Section Paragraph */
+.about-para {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* formatting About Project Paragraph */
+.projects-para {
+    font-size: 1.1rem;
+    margin-left: 8rem;
+    margin-right: 5rem;
+}
+
+/* project Section Styling */
+.projects {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.3rem;
+}
+
+
+.contact {
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.3rem;
+}
+
+.contact-div {
+    margin: 3.7rem 2rem;
+    /* border-radius: 1.5rem; */
+    background-color: #2F574A;
+    box-shadow: 0 0 10rem rgba(124, 230, 224, 0.5);
+    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+
+.details {
+    text-align: center;
+    background-color: #2F574A;
+    border-radius: 3rem;
+    /* border-bottom-left-radius: 20rem; */
+    /* border-bottom-right-radius: 1.1rem; */
+
+}
+
+.details>h4 {
+    color: white;
+}
+
+.details>a {
+    margin-bottom: 3rem;
+}
+
+/* footer font */
+.footer {
+    margin: 3.7rem 2rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 1.1rem;
+}
+
+/* favicon id */
+#icon-style {
+    font-size: 1.2rem;
+    padding: 1.1rem;
+    cursor: pointer;
+}
+
+/* Horizontal Ruler */
+.hr {
+    width: 13rem;
+    text-align: center;
+}
+
+.hr2 {
+    width: 90%;
+    max-width: 65rem;
+    /* background-color: #144b39; */
+    /* color: white; */
+    /* height: 0.3rem; */
+    /* border: black; */
+    /* margin-left: 9rem; */
+    text-align: left;
+    color: #144b39;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+
+    .div,
+    .div2,
+    .contact,
+    .footer {
+        margin: 3rem 1rem;
+    }
+
+    .about-img,
+    .project-img {
+        max-width: 100%;
+    }
+
+    .about-para,
+    .projects-para {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .about-para {
+        margin-bottom: 5rem;
+    }
+
+}
