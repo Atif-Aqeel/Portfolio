@@ -1,6 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 /* This will set background color of whole page */
-html {
+html,
+body {
     background-color: #bfecde;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Set font for just name  */
@@ -171,7 +179,7 @@ html {
 
 /* footer font */
 .footer {
-    margin: 0rem 2rem 0rem 2rem;
+    margin: 0 2rem;
     background-color: black;
     color: white;
     text-align: center;
