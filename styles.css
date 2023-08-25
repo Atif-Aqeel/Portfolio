@@ -18,7 +18,7 @@ body {
 }
 
 /* Set Font */
-.div {
+.header {
     align-items: left;
     margin-top: 7rem;
     margin-left: 7rem;
@@ -26,8 +26,8 @@ body {
     font-size: 1rem;
 }
 
-/* div2 for alternative of div (opposite changes)*/
-.div2 {
+/* about-section for alternative of header (opposite changes)*/
+.about-section {
     align-items: center;
     margin: 3.7rem 2rem;
     background-color: #2F574A;
@@ -50,8 +50,8 @@ body {
     cursor: pointer;
 }
 
-/* button2 opposite of button (opposite changes) */
-.button2 {
+/* button-white opposite of button (opposite changes) */
+.button-white {
     background-color: #2F574A;
     border-color: white;
     border-radius: 0.5rem;
@@ -90,7 +90,7 @@ body {
 
 
 /* About Section */
-.about {
+.about-me {
     color: white;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -200,7 +200,7 @@ body {
 }
 
 /* Horizontal Ruler Used in Project Section */
-.hr2 {
+.hr-project {
     width: 90%;
     max-width: 65rem;
     text-align: left;
@@ -211,8 +211,8 @@ body {
 /* Media query for smaller screens */
 @media (max-width: 767px) {
 
-    .div,
-    .div2,
+    .header,
+    .about-section,
     .contact {
         margin: 3rem 1rem;
     }
