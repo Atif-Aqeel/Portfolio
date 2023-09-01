@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="/styles/userProfile.css">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="view-account">
+            <section class="flex-container">
+
+                <div class="side-bar">
+                    <div class="user-info">
+                        <img src="/assets/img_girl.jpg" alt=" image" class="userImage">
+                        <h4>Atif Aqeel</h4>
+                        <h4>Admin</h4>
+                        <h4>admin@gmail.com</h4>
+                    </div>
+
+                    <div class="side-menu">
+                        <h4><a href="#project">Projects</a></h4>
+                        <h4><a href="#viewUser">Users </a></h4>
+                        <h4><a href="#portfolio">Portfolios</a></h4>
+                    </div>
+                </div>
+
+                <nav class="navAdmin">
+                    <div class="nav-links">
+                        <a href="/index.html">Home</a>
+                        <a href="/userProfile.html">User</a>
+                        <a href="/userLogin.html" id="logoutBtn">Logout</a>
+                    </div>
+                </nav>
+
+                <section class="content-panel">
+                    <header>
+                        <h1> Admin </h1>
+                    </header>
+
+                    <!-- Project Section -->
+                    <h2 class="title" id="project">Projects
+                        <input type="text" id="search" placeholder="search" list="keyword-suggestions">
+                        <datalist id="keyword-suggestions"> </datalist>
+                        <button id="search-button" class="search-button">Search</button>
+                    </h2>
+                    <section class="section-group">
+                        <button class="update-button" id="add-project">Add Project</button>
+                        <fieldset class="fieldset">
+                            <h3>Project Info :</h3>
+                            <div class="content" id="project-content">
+                                <ul id="projects-list"></ul>
+                                <div id="data-container" class="data-container"></div>
+                            </div>
+                        </fieldset>
+                    </section>
+
+
+                    <!-- Users Section -->
+                    <h2 class="title" id="viewUser">Active Users
+                        <input type="text" id="searchUser" placeholder="search" list="keyword-suggestions-user">
+                        <datalist id="keyword-suggestions-user"></datalist>
+                        <button id="searchUserBtn" class="search-button">Search</button>
+                    </h2>
+                    <section class="section-group">
+                        <button class="update-button" id="add-user">Add User</button>
+                        <fieldset class="fieldset">
+                            <h3>All Users</h3>
+                            <div class="content" id="user-section">
+                                <ul id="user-list"></ul>
+                                <div id="user-container" class="data-container"></div>
+                            </div>
+                        </fieldset>
+                    </section>
+
+
+                    <!-- Portfolio Section -->
+                    <h2 class="title" id="portfolio">Portfolios </h2>
+                    <section class="section-group">
+                        <h3>All Portfolios</h3>
+                        <section id="portfolio-container" class=" portfolio-container card"> </section>
+
+                        <!-- Hidden modal structure -->
+                        <div id="projectModal" class="modal">
+                            <div class="modal-content">
+                                <img id="modalImage" class="modalImage" src="" alt="project_image">
+                                <h3 id="modalTitle" class="modalTitle"> Title</h3>
+                                <p id="modalDescription" class="modalDescription">Description</p>
+                            </div>
+                        </div>
+
+
+                    </section>
+
+
+                </section>
+        </div>
+    </div>
+
+    <script type="module" src="/scripts/admin.js"></script>
+    <script type="module" src="/scripts/userProfile.js"></script>
+    <script type="module" src="/scripts/index.js"> </script>
+</body>
+
+</html>

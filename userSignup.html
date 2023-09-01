@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link rel="stylesheet" href="styles/signup.css">
+    <script type="module" src="/scripts/auth.js"></script>
+</head>
+
+<body>
+    <div class="signup-container" id="id01">
+
+        <span class="closeBtn" title="Close Modal">&times;</span>
+        <h2 class="registration">Registration</h2>
+
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="username">Username: <span>*</span></label>
+                <input type="text" id="username" name="username" placeholder="e.g Atif Aqeel" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email: <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="name123@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password: <span>*</span></label>
+                <input type="password" id="password" name="password" placeholder="*******" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number: <span>*</span></label>
+                <input type="tel" id="number" name="number" placeholder="+92-123456789" required>
+            </div>
+            <input class="button" type="submit" value="Sign Up">
+        </form>
+        <p>
+            Already have an account?<a href="/userLogin.html" class="button-Side-Login">Login</a>
+        </p>
+    </div>
+
+</body>
+
+</html>

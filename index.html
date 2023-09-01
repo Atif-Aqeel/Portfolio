@@ -8,12 +8,9 @@
     <!-- This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Pro CDN references and other meta, styling, and script bits -->
-    <meta name="referrer" content="strict-origin" />
-
     <title>Atif Aqeel</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Favicon Inserted here -->
@@ -25,29 +22,42 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- <script type="module" src="scripts/index.js"></script> -->
+
 </head>
 
 <body>
 
-    <!-- Personal Details Section -->
-    <header class="header">
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="/userProfile.html">Profile</a>
+        <a href="/admin.html">Admin</a>
+        <a href="#projectsId">Projects</a>
+        <a href="#contactId"> Contact </a>
+        <a href="/userLogin.html" class="logout">Logout</a>
+
+    </div>
+
+    <!-- Details Section -->
+    <header class="header">Portfolio</header>
+
+    <section class="intro-section">
         <h1>Hi, My name is <span class="name" title=" Atif Aqeel">Atif Aqeel </span></h1>
         <h2>I'm the Developer </h2>
-        <button class="button" title="More About Atif Aqeel">Know More </button>
-    </header>
+        <a href="#about-section">
+            <button class="button" title="More About Atif Aqeel"> Know More </button></a>
+    </section>
     <br>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about-section">
         <br><br>
         <h2 class="about-me"> About Me</h2>
-
         <div class="flex-container">
-
             <div class="flex-item-left">
                 <img src="assets/img_girl.jpg" alt="imag_girl" class="about-img">
             </div>
-
             <div class="flex-item-right">
                 <br><br>
                 <blockquote class="about-para"> I am a recent graduate from PUCIT with a degree in BSSE (Bachelor of
@@ -57,140 +67,84 @@
                     knowledge to a reputable software company, where I can grow professionally and make a positive
                     impact in the industry.
                     <br>
-                    <button class="button-white" title="Atif's Resume">View Resume</button>
+                    <a href="/assets/Atif_Resume.pdf" target="_blank" id="resumeLink">
+                        <button class="button-white" title="Atif's Resume">View Resume</button>
+                    </a>
                 </blockquote>
                 <br>
             </div>
-
         </div>
-
     </section>
 
+    <!-- Projects Section Dynamically listing-->
+    <section id="projectsId">
+        <div>
+            <h2 class="projects">Projects</h2>
+        </div>
 
-    <!-- Projects -->
-    <section>
-        <h2 class="projects">Projects</h2>
+        <!-- HTML structure for project listings -->
+        <section id="projectContainer" class="flex-container-project"></section>
 
-        <!-- Project 1 Section -->
-        <section class="flex-container-project">
-
-            <div class="flex-item-right">
-                <blockquote class="projects-para">
-                    <h3> Project 1 </h3>
-                    I am a recent graduate from PUCIT with a degree in BSSE (Bachelor of
-                    Science in Software Engineering) and hold a CGPA of 3.2. I possess strong technical acumen and
-                    excellent problem-solving abilities, and I am enthusiastic about continually learning and adopting
-                    new technologies. Currently, I am actively seeking opportunities to contribute my skills and
-                    knowledge to a reputable software company, where I can grow professionally and make a positive
-                    impact in the industry.
-                    <br>
-                    <button class="button" title="Live">See Live</button>
-                    <button class="button" title="View Code"> Source Code </button>
-                </blockquote>
-                <br>
+        <!-- Hidden modal structure -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <img id="modalImage" class="modalImage" src="" alt="project_image">
+                <h3 id="modalTitle" class="modalTitle"> Title</h3>
+                <p id="modalDescription" class="modalDescription">Description</p>
             </div>
-
-            <div class="flex-item-left">
-                <img src="assets/img_girl.jpg" alt="imag_girl" class="project-img">
-            </div>
-
-        </section>
-
-        <hr class="hr-project">
-
-        <!-- Project 2 Section -->
-        <section class="flex-container-project">
-
-            <div class="flex-item-right">
-                <blockquote class="projects-para">
-                    <h3> Project 2 </h3>
-                    I am a recent graduate from PUCIT with a degree in BSSE (Bachelor of
-                    Science in Software Engineering) and hold a CGPA of 3.2. I possess strong technical acumen and
-                    excellent problem-solving abilities, and I am enthusiastic about continually learning and adopting
-                    new technologies. Currently, I am actively seeking opportunities to contribute my skills and
-                    knowledge to a reputable software company, where I can grow professionally and make a positive
-                    impact in the industry.
-                    <br>
-                    <button class="button" title="Live">See Live</button>
-                    <button class="button" title="View Code"> Source Code </button>
-                </blockquote>
-                <br>
-            </div>
-
-            <div class="flex-item-left">
-                <img src="assets/img_girl.jpg" alt="imag_girl" class="project-img">
-            </div>
-
-        </section>
-
-        <hr class="hr-project">
-
-        <!-- Project 3 Section -->
-        <section class="flex-container-project">
-
-            <div class="flex-item-right">
-                <blockquote class="projects-para">
-                    <h3> Project 3 </h3>
-                    I am a recent graduate from PUCIT with a degree in BSSE (Bachelor of
-                    Science in Software Engineering) and hold a CGPA of 3.2. I possess strong technical acumen and
-                    excellent problem-solving abilities, and I am enthusiastic about continually learning and adopting
-                    new technologies. Currently, I am actively seeking opportunities to contribute my skills and
-                    knowledge to a reputable software company, where I can grow professionally and make a positive
-                    impact in the industry.
-                    <br>
-                    <button class="button" title="Live">See Live</button>
-                    <button class="button" title="View Code"> Source Code </button>
-                </blockquote>
-                <br>
-
-            </div>
-
-            <div class="flex-item-left">
-                <img src="assets/img_girl.jpg" alt="imag_girl" class="project-img">
-            </div>
-
-        </section>
-
-        <hr class="hr-project">
-
+        </div>
     </section>
     <br>
 
-
     <!-- Contact Section -->
-    <section class="contact-div">
+    <section class="contact-div" id="contactId">
         <br>
         <h2 class="contact"> Contact </h2>
-
         <div class="details">
-            <h4>[ Cell to Action ]</h4>
-            <button class="button-white" title="03091144185">+92-3091144185 </button>
-            <a href="mailto:webmaster@example.com" class="button-white" title="AtifAqeel430@gmail.com">
-                AtifAqeel430@gmail.com</a><br>
+            <h4>[ Call to Action ]</h4>
+            <a href="https://wa.me/3091144185" class="whatsappBtn" target="_blank" title="+9230391144185">
+                <i class="fa fa-whatsapp " style="color: #57a343;"></i>
+            </a>
+            <a id="emailButton" href="mailto:webmaster@example.com" class="button-white" title="AtifAqeel430@gmail.com">
+                <i class="fa fa-envelope "></i> </a>
         </div>
         <br>
-
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <i class="fa fa-caret-up icon-style" title="Go to Top"></i>
-        <br>
-        <i class="fa fa-twitter icon-style" title="Twitter"></i>
-
-        <!-- <i class="fa fa-twitter" id="icon-style" title="Twitter"></i> -->
-        <i class="fa fa-linkedin icon-style" title="Linkedin"></i>
-        <i class="fa fa-github icon-style" title="Github"></i>
-        <i class="fa fa-instagram icon-style" title="Instagram"></i>
+        <div class="icon-style">
+            <a href="#top">
+                <i class="fa fa-arrow-up icon-style" title="Go to Top"></i>
+            </a>
+            <br>
+            <a href="https://twitter.com/AtifAqeel18" target="_blank">
+                <i class="fa fa-twitter icon-style" title="Twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/atifaqeel518" target="_blank">
+                <i class="fa fa-linkedin icon-style" title="Linkedin"></i>
+            </a>
+            <a href="https://github.com/Atif-Aqeel" target="_blank">
+                <i class="fa fa-github icon-style" title="Github"></i>
+            </a>
+            <a href="https://www.instagram.com/its_influencer518" target="_blank">
+                <i class="fa fa-instagram icon-style" title="Instagram"></i>
+            </a>
+        </div>
 
         <hr class="hr">
-
         <h5> &copy; 2023 - Reserves Rights Template </h5>
-
-        <i class="fa fa-code-fork icon-style" aria-hidden="true" title="Github fork"> 5,213</i>
-        <i class="fa fa-star icon-style" aria-hidden="true" title="Github Repo Stars"> 12,528</i>
-
+        <div>
+            <a href="https://github.com/Atif-Aqeel/Portfolio/forks" target="_blank">
+                <i class="fa fa-code-fork icon-style" title="Github fork"> 5,213</i>
+            </a>
+            <a href="https://github.com/Atif-Aqeel/Portfolio/stargazers" target="_blank">
+                <i class="fa fa-star icon-style" title="Github Repo Stars"> 12,528</i>
+            </a>
+        </div>
     </footer>
+
+    <script type="module" src="scripts/index.js" defer></script>
 
 </body>
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="styles/signup.css">
+    <!-- <script type="module" src="/scripts/auth.js"></script> -->
+
+</head>
+
+<body>
+
+    <div class="signup-container">
+
+        <span class="closeBtnLogin" title="Close Modal">&times;</span>
+        <h2 class="registration">Login Here</h2>
+
+        <form id="login-form" action="/userProfile.html" onsubmit="return true">
+            <div class="form-group">
+                <label for="email">Email: <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="AtifAqeel430@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password: <span>*</span></label>
+                <input type="password" id="password" name="password" placeholder="*******" required>
+            </div>
+            <input class="button" type="submit" value="login">
+        </form>
+        <p>
+            Not have an account?<a href="/userSignup.html" class="button-Side-Login">Signup</a>
+        </p>
+    </div>
+
+    <script type="module" src="/scripts/auth.js"></script>
+
+</body>
+
+</html>

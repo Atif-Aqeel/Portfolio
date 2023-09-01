@@ -2,13 +2,43 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* This will set background color of whole page */
-html,
 body {
     background-color: #bfecde;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+
+/* Style the top navigation bar */
+.navbar {
+    /* direction: rtl; */
+    display: flex;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.logout {
+    margin-left: 52rem;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #2F574A;
+    color: #bfecde;
 }
 
 /* Set font for just name  */
@@ -19,8 +49,16 @@ body {
 
 /* Set Font */
 .header {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    margin-top: 4rem;
+}
+
+.intro-section {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     align-items: left;
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
     margin-left: 7rem;
     margin-right: 2rem;
     font-size: 1rem;
@@ -63,6 +101,11 @@ body {
     margin-top: 1rem;
 }
 
+.projectButton {
+    margin-left: 8rem;
+}
+
+
 /* styling of image used in About Section */
 .about-img {
     /* use relative width*/
@@ -82,7 +125,7 @@ body {
 /* styling of image used in Project Section */
 .project-img {
     max-width: 100%;
-    width: 20rem;
+    width: 16rem;
     height: auto;
     margin: 3rem auto;
     margin-right: 5rem;
@@ -116,7 +159,6 @@ body {
     flex: 50%;
 }
 
-
 .flex-container-project {
     display: flex;
     flex-wrap: wrap;
@@ -126,6 +168,12 @@ body {
     margin-bottom: 2rem;
 }
 
+.title {
+    font-size: 1.5rem;
+    color: #144b39;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+}
 
 /* formatting About Section Paragraph */
 .about-para {
@@ -138,6 +186,13 @@ body {
     font-size: 1.1rem;
     margin-left: 8rem;
     margin-right: 5rem;
+
+    /* display: block; */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* -webkit-line-clamp: 3; */
+    /* line-clamp: 3; */
 }
 
 /* project Section Styling */
@@ -145,7 +200,62 @@ body {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.3rem;
+    /* background-color: #144b39; */
+    height: 5rem;
+    padding: 2%;
+    margin: 3.7rem 2rem;
+    /* border-bottom-left-radius: 3rem; */
+    /* box-shadow: 0 0 10rem rgba(124, 230, 224, 0.5); */
+    /* opacity: 0.5; */
 }
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* padding-top: 1rem; */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #144b39;
+    color: white;
+    /* margin: 5% auto 15% auto; */
+    margin-top: 2rem;
+    margin-left: 9rem;
+    margin-right: 3rem;
+    border: 4px solid #888;
+    width: 80%;
+}
+
+.modalImage {
+    text-align: center;
+    /* position: relative; */
+    max-width: 100%;
+    width: 16rem;
+    height: auto;
+    margin: 1rem 10rem 0 25rem;
+}
+
+.modalTitle {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.modalDescription {
+    text-align: center;
+    display: block;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
 
 /* Contact Section Styling*/
 .contact {
@@ -185,13 +295,27 @@ body {
     text-align: center;
 }
 
+
 /* favicon id */
 .icon-style {
     font-size: 1.2rem;
-    padding: 1.1rem;
+    padding: 1rem;
     cursor: pointer;
+    color: white;
 }
 
+/* whatsappBtn */
+.whatsappBtn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2F574A;
+}
+
+/* Email Btn */
+.button-white {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
 
 /* Horizontal Ruler Used in Footer*/
 .hr {
@@ -204,6 +328,7 @@ body {
     width: 90%;
     max-width: 65rem;
     text-align: left;
+    margin-left: 10rem;
     color: #144b39;
 }
 
@@ -212,6 +337,7 @@ body {
 @media (max-width: 767px) {
 
     .header,
+    .intro-section,
     .about-section,
     .contact {
         margin: 3rem 1rem;

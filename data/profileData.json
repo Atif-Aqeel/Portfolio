@@ -1,0 +1,157 @@
+{
+    "project": [
+        {
+            "Title": "CMS",
+            "Description": "Campus Management System",
+            "Date": "8/30/2023",
+            "Technology": "WEB",
+            "Languages": "Javascript",
+            "Tags": [
+                "JS",
+                " Javascript",
+                " HTML",
+                " CSS"
+            ]
+        },
+        {
+            "Title": "BDS",
+            "Description": "Blood Donor System",
+            "Date": "8/30/2023",
+            "Technology": "MERN Stack",
+            "Languages": [
+                "React",
+                " Node",
+                " Express",
+                " MongoDB"
+            ],
+            "Tags": [
+                "reactjs",
+                " Javascript",
+                " nodejs",
+                " mongoDB",
+                " expressjs"
+            ]
+        },
+        {
+            "Title": "E-Commerce",
+            "Description": "Commerce Website",
+            "Date": "8/30/2023"
+        },
+        {
+            "Title": "Block Chain",
+            "Description": "Block Chain Website",
+            "Date": "8/30/2023",
+            "Languages": [
+                "React",
+                " Node",
+                " Express",
+                " MongoDB"
+            ]
+        },
+        {
+            "Title": "Mobile App",
+            "Description": "Mobile App Testing",
+            "Date": "8/30/2023",
+            "Tags": [
+                "reactjs",
+                " Javascript",
+                " nodejs",
+                " mongoDB",
+                " expressjs"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "jobTitle": "Software Engineer",
+            "organizations": "Focusteck",
+            "workExperience": "2 Years",
+            "memberships": "Yes"
+        },
+        {
+            "jobTitle": "SSE",
+            "organizations": "Focusteck",
+            "workExperience": "5 Years",
+            "memberships": "Yes"
+        },
+        {
+            "jobTitle": "Principle Engineer",
+            "organizations": "Focusteck",
+            "workExperience": "7 Years",
+            "memberships": "Yes"
+        }
+    ],
+    "education": [
+        {
+            "Organizations": "PUCIT",
+            "joinDate": "01/07/2019",
+            "leaveDate": "01/07/2023",
+            "Grade": "A+",
+            "Location": "Lahore"
+        },
+        {
+            "Organizations": "PGC",
+            "joinDate": "01/07/2017",
+            "leaveDate": "01/07/2019",
+            "Grade": "A+",
+            "Location": "Lahore"
+        },
+        {
+            "Organizations": "SPS",
+            "joinDate": "01/07/2015",
+            "leaveDate": "01/07/2017",
+            "Grade": "A+",
+            "Location": "Lahore"
+        },
+        {
+            "Organizations": "PUCIT",
+            "joinDate": "01/07/2019",
+            "leaveDate": "01/07/2023",
+            "Grade": "A+",
+            "Location": "Lahore"
+        },
+        {
+            "Organizations": "PUCIT",
+            "joinDate": "01/07/2019",
+            "leaveDate": "01/07/2023",
+            "Grade": "A+",
+            "Location": "Lahore"
+        }
+    ],
+    "skills": [
+        "Active listening",
+        "Communication",
+        "Computer skills",
+        "Customer service",
+        "Interpersonal skills",
+        "Leadership",
+        "Management skills",
+        "Problem-solving",
+        "Time management",
+        "Teamwork"
+    ],
+    "portfolioProjects": [
+        {
+            "title": "Project 1",
+            "description": "I am a recent graduate from PUCIT with a degree in BSSE \n (Bachelor of Science in Software Engineering) and hold a CGPA of 3.2.\n I possess strong technical acumen and excellent problem-solving abilities \n, and I am enthusiastic about continually learning and adopting new technologies.\n Currently, I am actively seeking opportunities to contribute my skills and \n knowledge to a reputable software company, where I can grow professionally and make a positive impact in the industry.\n",
+            "image": "/assets/img_girl.jpg",
+            "url": "/index.html"
+        },
+        {
+            "title": "Project 2",
+            "description": "I am a recent graduate from PUCIT with a degree in BSSE \n (Bachelor of Science in Software Engineering) and hold a CGPA of 3.2.\n I possess strong technical acumen and excellent problem-solving abilities \n, and I am enthusiastic about continually learning and adopting new technologies.\n Currently, I am actively seeking opportunities to contribute my skills and \n knowledge to a reputable software company, where I can grow professionally and make a positive impact in the industry.\n",
+            "image": "/assets/img_girl.jpg",
+            "url": "/index.html"
+        },
+        {
+            "title": "Project 3",
+            "description": "I am a recent graduate from PUCIT with a degree in BSSE \n (Bachelor of Science in Software Engineering) and hold a CGPA of 3.2.\n I possess strong technical acumen and excellent problem-solving abilities \n, and I am enthusiastic about continually learning and adopting new technologies.\n Currently, I am actively seeking opportunities to contribute my skills and \n knowledge to a reputable software company, where I can grow professionally and make a positive impact in the industry.\n",
+            "image": "/assets/img_girl.jpg"
+        },
+        {
+            "title": "Project 4",
+            "description": "I am a recent graduate from PUCIT with a degree in BSSE \n (Bachelor of Science in Software Engineering) and hold a CGPA of 3.2.\n I possess strong technical acumen and excellent problem-solving abilities \n, and I am enthusiastic about continually learning and adopting new technologies.\n Currently, I am actively seeking opportunities to contribute my skills and \n knowledge to a reputable software company, where I can grow professionally and make a positive impact in the industry.\n",
+            "image": "/assets/img_girl.jpg"
+        }
+    ]
+}

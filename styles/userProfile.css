@@ -1,0 +1,392 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #40babd;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.view-account {
+    background: #40babd;
+    /* margin-top: 20px; */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    background-color: #bfecde;
+}
+
+.side-bar {
+    /* margin-top: 3rem; */
+    position: fixed;
+    background: #2F574A;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 30px;
+    color: #40babd;
+    border-bottom: 1px solid #f3f3f3;
+    width: 11rem;
+    height: 35rem;
+}
+
+.user-info {
+    margin: 1rem;
+    margin-top: 0rem;
+    text-align: center;
+}
+
+.userImage {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 2.8rem;
+}
+
+.side-menu {
+    text-align: left;
+    margin: 1rem;
+    margin-left: 4rem;
+    width: 10px;
+    font-size: 21px;
+}
+
+.side-menu>h4>a {
+    color: #40babd;
+}
+
+.nav {
+    display: grid;
+    text-align: left;
+}
+
+.nav>li {
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    /* float: left; */
+    margin-right: 15px;
+    margin-bottom: 15px
+}
+
+header {
+    text-align: center;
+    font-size: x-large;
+    margin: 2rem;
+}
+
+.content-panel {
+    margin-left: 18rem;
+    margin-top: 1%;
+    width: 70%;
+    margin-bottom: 3rem;
+}
+
+.title {
+    margin-left: 1rem;
+}
+
+.fieldset {
+    margin: 1rem;
+}
+
+.section-group {
+    background-color: #2F574A;
+    color: #40babd;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.data-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 1rem; */
+    /* padding: 3rem; */
+}
+
+div.project {
+    margin: 2rem;
+    border-color: black;
+    padding: 1.2rem;
+    border-style: groove;
+}
+
+/* div.project.h4 {
+    margin: 1rem;
+} */
+
+div.experience {
+    margin: 2rem;
+    border-color: black;
+    padding: 1.2rem;
+    border-style: groove;
+}
+
+div.education {
+    margin: 2rem;
+    border-color: black;
+    padding: 1.2rem;
+    border-style: groove;
+}
+
+div.skills {
+    margin: 1rem;
+    border-color: black;
+    padding: 1rem;
+    border-style: groove;
+}
+
+div.user {
+    margin: 1rem;
+    border-color: black;
+    padding: 1rem;
+    border-style: groove;
+}
+
+div.userClass {
+    display: inline-block;
+    margin: 1rem;
+    border-color: black;
+    padding: 1rem;
+    border-style: groove;
+}
+
+/* .content.ul.projectList{
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.content {
+    margin-left: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: auto;
+    margin: 1rem;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: #2F574A;
+    /* font-size: medium; */
+    /* background-color: #bfecde; */
+}
+
+.update-button {
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: 2.5rem;
+    background-color: #2F574A;
+    color: #bfecde;
+    border-color: #bfecde;
+    border-radius: 0.7rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.update-button:hover,
+.update-button:focus {
+    color: #bfecde;
+    cursor: pointer;
+}
+
+.search-button {
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: 2.7rem;
+    background-color: #2F574A;
+    color: #bfecde;
+    border-color: #bfecde;
+    border-radius: 0.7rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    /* margin-left: 1rem; */
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    color: #bfecde;
+    /* cursor: pointer; */
+}
+
+
+.nav-links {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav {
+    /* margin-left: 20rem; */
+    margin-top: 0.5rem;
+    overflow: visible;
+    z-index: 1;
+    background-color: #333;
+    position: fixed;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 13px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #333;
+    color: white;
+}
+
+.navAdmin {
+    margin-top: 0.5rem;
+    overflow: visible;
+    z-index: 1;
+    background-color: #333;
+    position: fixed;
+}
+
+.navAdmin a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 18.5px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navAdmin a:hover {
+    background-color: #bfecde;
+    color: black;
+}
+
+.navAdmin a.active {
+    background-color: #333;
+    color: white;
+}
+
+.portfolio-container.card {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Card */
+.card {
+    margin: 1rem;
+    border: 1px solid #ccc;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cardImg {
+    max-width: 100%;
+    width: 10rem;
+    height: auto;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+}
+
+.cardPara {
+    margin-top: 10px;
+}
+
+.cardButton {
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: 2.5rem;
+    background-color: #2F574A;
+    color: #bfecde;
+    border-color: #bfecde;
+    border-radius: 0.7rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cardButton :hover {
+    color: #bfecde;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* padding-top: 1rem; */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #144b39;
+    color: white;
+    /* margin: 5% auto 15% auto; */
+    margin-top: 2rem;
+    margin-left: 9rem;
+    margin-right: 3rem;
+    border: 4px solid #888;
+    width: 80%;
+}
+
+.modalImage {
+    text-align: center;
+    /* position: relative; */
+    max-width: 100%;
+    width: 16rem;
+    height: auto;
+    margin: 1rem 10rem 0 25rem;
+}
+
+.modalTitle {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.modalDescription {
+    text-align: center;
+    display: block;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="/styles/userProfile.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="view-account">
+
+            <section class="flex-container">
+                <div class="side-bar">
+                    <div class="user-info">
+                        <img src="/assets/img_girl.jpg" alt=" image" class="userImage">
+                        <h4>Atif Aqeel</h4>
+                        <h4>Developer</h4>
+                        <h4>abc123@gmail.com</h4>
+                    </div>
+                    <div class="side-menu">
+                        <h4><a href="#project">Projects</a></h4>
+                        <h4><a href="#experience"> Experience</a></h4>
+                        <h4><a href="#education">Education</a></h4>
+                        <h4><a href="#skills">Skills</a></h4>
+                    </div>
+                </div>
+
+                <nav class="topnav">
+                    <div class="nav-links">
+                        <a href="/admin.html">Admin</a>
+                        <a href="/index.html">Portfolio</a>
+                        <a href="/userLogin.html" id="logoutBtn">Logout</a>
+                    </div>
+                </nav>
+
+
+                <section class="content-panel">
+                    <header>
+                        <h1> User Profile </h1>
+                    </header>
+
+                    <!-- Project Section -->
+                    <h2 class="title" id="project">Projects
+                        <input type="text" id="search" placeholder="search" list="keyword-suggestions">
+                        <datalist id="keyword-suggestions"> </datalist>
+                        <button id="search-button" class="search-button">Search</button>
+                    </h2>
+                    <section class="section-group">
+                        <button class="update-button" id="add-project">Add Project</button>
+                        <fieldset class="fieldset">
+                            <h3>Project Info :</h3>
+                            <div class="content" id="project-content">
+                                <ul id="projects-list"></ul>
+                                <div id="data-container" class="data-container"></div>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                    <!-- Experience Section -->
+                    <h2 class="title" id="experience">Experience </h2>
+                    <section class="section-group">
+                        <fieldset class="fieldset">
+                            <h3>Experience Info : </h3>
+                            <div class="content" id="experience-section">
+                                <ul id="experience-list"></ul>
+                                <div id="exp-container" class="data-container"></div>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                    <!-- Education Section -->
+                    <h2 class="title" id="education">Education </h2>
+                    <section class="section-group">
+                        <fieldset class="fieldset">
+                            <h3>Education Info:</h3>
+                            <div class="content" id="education-section">
+                                <ul id="education-list"></ul>
+                                <div id="edu-container" class="data-container"></div>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                    <!-- Skills Section -->
+                    <h2 class="title" id="skills">Skills </h2>
+                    <section class="section-group">
+                        <fieldset class="fieldset">
+                            <h3>Skills:</h3>
+                            <div class="content" id="skills">
+                                <ul id="skills-list"></ul>
+                                <div id="skill-container" class="data-container"></div>
+                            </div>
+                        </fieldset>
+                    </section>
+
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script type="module" src="/scripts/userProfile.js"></script>
+    <script src="/scripts/index.js"> </script>
+
+</body>
+
+</html>
