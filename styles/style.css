@@ -4,7 +4,15 @@
 
 html {
     scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
 
 /* This will set background color of whole page */
 body {
@@ -18,21 +26,24 @@ body {
 
 /* Style the top navigation bar */
 .navbar {
-    /* direction: rtl; */
     display: flex;
+    flex-wrap: wrap;
     background-color: #333;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 8px;
 }
 
 /* Style the navigation bar links */
 .navbar a {
     color: white;
-    padding: 14px 20px;
+    padding: 20px 15px;
     text-decoration: none;
     text-align: center;
 }
 
 .logout {
-    margin-left: 52rem;
+    margin-left: 50rem;
 }
 
 /* Change color on hover */
@@ -51,8 +62,9 @@ body {
 .header {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 3rem;
-    margin-top: 4rem;
+    font-size: 2.8rem;
+    margin-top: 2.5rem;
+    font-weight: bold;
 }
 
 .intro-section {
@@ -67,7 +79,7 @@ body {
 /* about-section for alternative of header (opposite changes)*/
 .about-section {
     align-items: center;
-    margin: 3.7rem 2rem;
+    margin: 3.7rem 3rem;
     background-color: #2F574A;
     border-radius: 1.1rem;
     border-bottom-left-radius: 0.3rem;
@@ -102,7 +114,9 @@ body {
 }
 
 .projectButton {
-    margin-left: 8rem;
+    margin-left: 5rem;
+    font-style: italic;
+    font-size: large;
 }
 
 
@@ -117,7 +131,7 @@ body {
     width: 100%;
     max-width: 16rem;
     height: auto;
-    margin: 3rem auto;
+    margin: 4rem auto;
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
@@ -164,35 +178,30 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
-    margin-bottom: 2rem;
+    margin: 3rem;
+    background-color: #2F574A;
+    border-radius: 1rem;
 }
 
 .title {
     font-size: 1.5rem;
-    color: #144b39;
-    margin-left: 8rem;
+    color: black;
+    margin-left: 5rem;
     margin-bottom: 1rem;
 }
 
 /* formatting About Section Paragraph */
 .about-para {
-    color: white;
+    color: rgb(241, 235, 235);
     font-size: 1.1rem;
 }
 
 /* formatting About Project Paragraph */
 .projects-para {
-    font-size: 1.1rem;
-    margin-left: 8rem;
+    font-size: 1.2rem;
+    margin-left: 5rem;
     margin-right: 5rem;
-
-    /* display: block; */
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
-    /* -webkit-line-clamp: 3; */
-    /* line-clamp: 3; */
+    color: black;
 }
 
 /* project Section Styling */
@@ -203,14 +212,12 @@ body {
     /* background-color: #144b39; */
     height: 5rem;
     padding: 2%;
-    margin: 3.7rem 2rem;
-    /* border-bottom-left-radius: 3rem; */
-    /* box-shadow: 0 0 10rem rgba(124, 230, 224, 0.5); */
-    /* opacity: 0.5; */
+    margin: 3rem 2rem;
 }
 
 /* The Modal (background) */
 .modal {
+    overscroll-behavior: auto none;
     display: none;
     position: fixed;
     z-index: 1;
@@ -218,10 +225,12 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    /* padding-top: 1rem; */
+    overflow: auto;
+    overflow-y: hidden;
 }
+
+
 
 /* Modal Content/Box */
 .modal-content {
@@ -299,9 +308,13 @@ body {
 /* favicon id */
 .icon-style {
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: 0.7rem;
     cursor: pointer;
     color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* whatsappBtn */
@@ -328,7 +341,8 @@ body {
     width: 90%;
     max-width: 65rem;
     text-align: left;
-    margin-left: 10rem;
+    margin-left: 8rem;
+    margin-right: 5rem;
     color: #144b39;
 }
 
@@ -341,6 +355,19 @@ body {
     .about-section,
     .contact {
         margin: 3rem 1rem;
+    }
+
+    .projects {
+        margin: auto;
+        font-size: 30px;
+    }
+
+    .title {
+        margin-left: 1rem;
+    }
+
+    .projectButton {
+        margin-left: 1rem;
     }
 
     .contact-div {
@@ -369,6 +396,20 @@ body {
 
     .about-para {
         margin-bottom: 5rem;
+
+    }
+
+    .navbar {
+        max-width: auto;
+        margin: auto;
+
+    }
+
+}
+
+@media (max-width: 1115px) {
+    .logout {
+        margin-left: 0rem;
     }
 
 }

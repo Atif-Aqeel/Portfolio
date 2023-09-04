@@ -299,7 +299,9 @@ input {
 
 /* Card */
 .card {
-    margin: 1rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 2rem;
     border: 1px solid #ccc;
     padding-bottom: 14px;
     padding-top: 14px;
@@ -310,7 +312,7 @@ input {
 
 .cardImg {
     max-width: 100%;
-    width: 10rem;
+    width: 11rem;
     height: auto;
 }
 
@@ -320,6 +322,11 @@ input {
 
 .cardPara {
     margin-top: 10px;
+    display: block;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: justify;
+    color: #bfecde;
 }
 
 .cardButton {

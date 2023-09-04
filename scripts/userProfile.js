@@ -164,16 +164,10 @@ uniqueTags.forEach(tag => {
     option.value = tag;
     keywordSuggestions.appendChild(option);
 });
-
-
-
-
-
 //=============================================================
-// Experience
 
+// Experience
 const expContainer = document.getElementById('exp-container');
-// Loop over the projectData and generate HTML
 projectData.experience.forEach(experience => {
     const experienceDiv = document.createElement('div');
     experienceDiv.classList.add('experience');
@@ -183,15 +177,13 @@ projectData.experience.forEach(experience => {
         entryElement.textContent = `${key}: ${Array.isArray(value) ? value.join(', ') : value}`;
         experienceDiv.appendChild(entryElement);
     }
+
     expContainer.appendChild(experienceDiv);
 });
-
-
 //=============================================================
+
 // Education
-
 const eduContainer = document.getElementById('edu-container');
-
 // Loop over the projectData and generate HTML
 projectData.education.forEach(education => {
     const eduDiv = document.createElement('div');
@@ -202,12 +194,12 @@ projectData.education.forEach(education => {
         entryElement.textContent = `${key}: ${Array.isArray(value) ? value.join(', ') : value}`;
         eduDiv.appendChild(entryElement);
     }
+
     eduContainer.appendChild(eduDiv);
 });
-
 // =======================================================
-// Skills
 
+// Skills
 const skillContainer = document.getElementById('skill-container');
 projectData.skills.forEach(skills => {
     const projectDiv = document.createElement('div');
@@ -217,9 +209,7 @@ projectData.skills.forEach(skills => {
     skillElement.textContent = skills;
 
     projectDiv.appendChild(skillElement);
-
     skillContainer.appendChild(projectDiv);
 });
-
 // =======================================================
 //Another Section

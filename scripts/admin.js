@@ -1,8 +1,7 @@
 import projectData from '../data/profileData.json' assert { type: "json" };
 import userData from '../data/users.json' assert { type: "json" };
 
-
-//Users
+// Display Users from JSON file
 const userContainer = document.getElementById('user-container');
 userData.viewUsers.forEach(user => {
     const userDiv = document.createElement('div');
@@ -41,7 +40,6 @@ addUserBtn.addEventListener("click", () => {
 // Display Projects After new Add
 function displayUser(users) {
     UserList.innerHTML = ''; // Clear the list before displaying
-
     users.forEach((user, index) => {
         var userContainer = document.createElement("div");
         userContainer.classList.add("userClass");
@@ -51,6 +49,7 @@ function displayUser(users) {
             entryElement.textContent = `${key}: ${Array.isArray(value) ? value.join(', ') : value}`;
             userContainer.appendChild(entryElement);
         }
+
         addEditDeleteButtons(userContainer, index);
         UserList.appendChild(userContainer);
     });
@@ -67,7 +66,6 @@ function addEditDeleteButtons(userContainer, userIndex) {
         const updatedRole = prompt("Enter updated Role:");
         const updatedNumber = prompt('Enter new Number');
 
-        // (updatedName === null) ? Title = userName : (userDataArray[userIndex].Title = updatedName);
         if (updatedName !== null) {
             userDataArray[userIndex].Title = updatedName;
         }
@@ -98,7 +96,6 @@ function addEditDeleteButtons(userContainer, userIndex) {
     userContainer.appendChild(editBtn);
     userContainer.appendChild(deleteBtn);
 }
-
 
 //Search User
 const searchInput = document.getElementById('searchUser');
@@ -142,11 +139,11 @@ uniqueSuggestions.forEach(suggestions => {
     keywordSuggestions.appendChild(option);
 });
 
-
 // =========================================================
-//Portfolio
 
-// Get the project container
+
+//Portfolio
+// Get the portfolio container
 const portfolioContainer = document.getElementById("portfolio-container");
 
 function truncateDescription(description) {
@@ -154,12 +151,12 @@ function truncateDescription(description) {
     const lines = description.split('\n');
     if (lines.length > maxLines) {
         const truncatedLines = lines.slice(0, maxLines);
-        // return lines.substring(0, maxLines) + '... ';
         return truncatedLines.join('\n') + '...';
     }
     return description;
 }
 
+// portfolio listing dynamically 
 function createPortfolioListing(portfolio) {
     const portfolioListing = document.createElement("section");
     portfolioListing.className = "portfolioListing";
@@ -176,11 +173,9 @@ function createPortfolioListing(portfolio) {
     portfolioContainer.appendChild(portfolioListing);
 
     const detailsButton = portfolioListing.querySelector(".button");
-
     detailsButton.addEventListener("click", () => {
 
         switch (true) {
-
             case portfolio.url === "/index.html":
                 window.open(`${portfolio.url}`, '_blank').focus();
                 break;
@@ -188,10 +183,10 @@ function createPortfolioListing(portfolio) {
                 openModal(portfolio);
                 break;
         }
-
     });
+
 }
-// Create project listings
+// Create portfolio listings from projectData.json file
 projectData.portfolioProjects.forEach(createPortfolioListing);
 
 
@@ -208,6 +203,7 @@ function openModal(portfolio) {
 
     modal.style.display = "block";
 }
+
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", (event) => {
     const modal = document.getElementById("projectModal");
