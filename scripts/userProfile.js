@@ -1,129 +1,233 @@
 import projectData from '../data/profileData.json' assert { type: "json" };
+import usersData from '../data/users.json' assert { type: "json"}
 
-const dataContainer = document.getElementById('data-container');
-//Display The JSON Projects
-projectData.project.forEach(project => {
-    const projectDiv = document.createElement('div');
-    projectDiv.classList.add('project');
 
-    for (const [key, value] of Object.entries(project)) {
-        const entryElement = document.createElement('p');
-        entryElement.textContent = `${key}: ${Array.isArray(value) ? value.join(', ') : value}`;
-        projectDiv.appendChild(entryElement);
+// Function that redirect to login Page
+window.onload = function () {
+    const userEmail = localStorage.getItem("userEmail");
+
+    if (!userEmail) {
+        localStorage.removeItem("userEmail");
+        location.href = "http://127.0.0.1:5500/userLogin.html";
     }
-    dataContainer.appendChild(projectDiv);
-});
+    else {
+        console.log("Email from local storage:", userEmail);
+        userData(userEmail);
+    }
 
-// Display all projects
+};
+
+// show user data of login user
+function userData(userEmail) {
+    // Find the user by email
+    const user = usersData.users.find(item => item.email === userEmail);
+
+    if (user) {
+        const name = document.getElementById("userName");
+        const role = document.getElementById("userRole");
+        const email = document.getElementById("userEmail");
+
+        function appendAttribute(targetElement, attributeName, attributeValue) {
+            const entryElement = document.createElement('p');
+            entryElement.textContent = `${attributeName}: ${Array.isArray(attributeValue) ? attributeValue.join(', ') : attributeValue}`;
+            targetElement.appendChild(entryElement);
+        }
+
+        appendAttribute(name, "Name", user.username);
+        appendAttribute(role, "Role", user.role);
+        appendAttribute(email, "Email", user.email);
+
+    } else {
+        document.getElementById("userName").textContent = `Name: `;
+        document.getElementById("userRole").textContent = `Role: `;
+        document.getElementById("userEmail").textContent = `Email:`;
+    }
+}
+
+
+// Display Project Data
+const projectsList = document.getElementById("projects-list");
+
 function displayProjects(projects) {
-    projectsList.innerHTML = '';
+    projectsList.innerHTML = ''; // Clear the list before displaying
 
     projects.forEach((project, index) => {
         var projectContainer = document.createElement("div");
         projectContainer.classList.add("project");
 
-        var projectName2 = document.createElement("h3");
-        projectName2.textContent = project.Title;
-
-        var projectDescription2 = document.createElement("p");
-        projectDescription2.textContent = project.Description;
-
-        var projectDate2 = document.createElement("p");
-        projectDate2.textContent = project.Date;
-
-        var projectFramework2 = document.createElement("p");
-        projectFramework2.textContent = project.Framework;
-
-        var projectLanguage2 = document.createElement("p");
-        projectLanguage2.textContent = project.Language;
-
-        var projectTags2 = document.createElement("p");
-        projectTags2.textContent = project.Tags;
-
-        projectContainer.appendChild(projectName2);
-        projectContainer.appendChild(projectDescription2);
-        projectContainer.appendChild(projectDate2);
-        projectContainer.appendChild(projectFramework2);
-        projectContainer.appendChild(projectLanguage2);
-        projectContainer.appendChild(projectTags2);
+        for (const [key, value] of Object.entries(project)) {
+            var entryElement = document.createElement('p');
+            entryElement.textContent = `${key}: ${Array.isArray(value) ? value.join(', ') : value}`;
+            projectContainer.appendChild(entryElement);
+        }
 
         addEditDeleteButtons(projectContainer, index);
+
         projectsList.appendChild(projectContainer);
     });
 }
 
-// Add Projects
-const projectsList = document.getElementById("projects-list");
+// Array to store project data
+const projectDataArray = projectData.project;
+displayProjects(projectDataArray);
+console.count("file reloaded");
+
+
+// Add New Project by getting form id's
+const projectForm = document.getElementById("project-form");
+const addProjectForm = document.getElementById("add-project-form");
+const editProjectForm = document.getElementById("edit-project-form");
+
 const addProjectBtn = document.getElementById("add-project");
-const projectDataArray = [];    // Array to store project data
+const cancelAddBtn = document.getElementById("cancel-add");
 
 addProjectBtn.addEventListener("click", () => {
-    var projectName = prompt("Enter project Name:");
-    var projectDescription = prompt("Enter Description:");
-    var projectDate = prompt("Enter Date:");
-    var projectFramework = prompt("Enter FrameWork: ");
-    var projectLanguage = prompt("Enter Languages: ");
-    var projectTags = prompt("Enter Tags: ");
-
-    const newProject = {
-        Title: projectName,
-        Description: projectDescription,
-        Date: projectDate,
-        Framework: projectFramework,
-        Language: projectLanguage,
-        Tags: projectTags
-    };
-    projectDataArray.push(newProject);
-
-    displayProjects(projectDataArray);
+    addProjectForm.classList.remove("hidden");
+    editProjectForm.classList.add("hidden");
 });
+
+projectForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const projectName = document.getElementById("projectName").value;
+    const projectDescription = document.getElementById("description").value;
+    const projectDate = document.getElementById("date").value;
+    const projectFramework = document.getElementById("framework").value;
+    const projectLanguage = document.getElementById("languages").value;
+    const projectTags = document.getElementById("tags").value;
+
+    if (projectName && projectDescription && projectDate && projectFramework && projectLanguage && projectTags) {
+        const newProject = {
+            Title: projectName,
+            Description: projectDescription,
+            Date: projectDate,
+            Technology: projectFramework,
+            Languages: projectLanguage,
+            Tags: projectTags
+
+        };
+
+        // Create a new project container for the newly added project
+        const newProjectContainer = document.createElement("div");
+        newProjectContainer.classList.add("project");
+
+        for (const [key, value] of Object.entries(newProject)) {
+            const entryElement = document.createElement('p');
+            entryElement.textContent = `${key}: ${Array.isArray(value) ? value.join(', ') : value}`;
+            newProjectContainer.appendChild(entryElement);
+        }
+
+        addEditDeleteButtons(newProjectContainer, projectDataArray.length);
+
+        projectsList.appendChild(newProjectContainer);
+
+        // Add the new project to the projectDataArray
+        projectDataArray.push(newProject);
+
+        addProjectForm.classList.remove("hidden");
+        projectForm.reset();
+    }
+
+});
+
 
 // Function to add Edit and Delete buttons to a project
 function addEditDeleteButtons(projectContainer, projectIndex) {
+
     const editBtn = document.createElement("button");
+    editBtn.classList.add('update-button');
     editBtn.textContent = "Edit";
     editBtn.addEventListener("click", () => {
-        const updatedName = prompt("Enter updated Name:");
-        const updatedDesc = prompt("Enter updated Desc:");
-        const updatedDate = prompt("Enter updated Date:");
-        const updatedFramework = prompt('Enter new framework');
-        const updatedLanguage = prompt('Enter new language');
-        const updatedTags = prompt('Enter new tags');
-
-        if (updatedName != null) {
-            projectDataArray[projectIndex].Title = updatedName;
-        }
-        if (updatedDesc !== null) {
-            projectDataArray[projectIndex].Description = updatedDesc;
-        }
-        if (updatedDate !== null) {
-            projectDataArray[projectIndex].Date = updatedDate;
-        }
-        if (updatedFramework !== null) {
-            projectDataArray[projectIndex].Framework = updatedFramework;
-        }
-        if (updatedLanguage !== null) {
-            projectDataArray[projectIndex].Language = updatedLanguage;
-        }
-        if (updatedTags !== null) {
-            projectDataArray[projectIndex].Tags = updatedTags;
-        }
-        if (updatedName === null && updatedDesc === null && updatedDate === null && updatedFramework === null && updatedLanguage === null && updatedTags === null) {
-            alert("No updates were made.");
-        }
-        displayProjects(projectDataArray);
+        addProjectForm.classList.add("hidden");
+        openEditForm(projectIndex);
     });
 
     const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add('update-button');
     deleteBtn.textContent = "Delete";
     deleteBtn.addEventListener("click", () => {
-        projectDataArray.splice(projectIndex, 1);
-        displayProjects(projectDataArray);
+        deleteProject(projectIndex);
     });
 
     projectContainer.appendChild(editBtn);
     projectContainer.appendChild(deleteBtn);
 }
+
+
+// Function to open the Edit form with existing user data
+function openEditForm(projectIndex) {
+    const editForm = document.getElementById("edit-project-form");
+    editForm.innerHTML = ""; // Clear previous content
+
+    const project = projectDataArray[projectIndex];
+    for (const [key, value] of Object.entries(project)) {
+        const label = document.createElement("label");
+        label.textContent = key;
+        const input = document.createElement("input");
+        input.value = value;
+        input.setAttribute("name", key); // Set the name attribute to match the project data key
+        editForm.appendChild(label);
+        editForm.appendChild(input);
+    }
+
+    const saveEditBtn = document.createElement("button");
+    saveEditBtn.classList.add('update-button');
+    saveEditBtn.textContent = "Save";
+    saveEditBtn.addEventListener("click", () => {
+        saveEditProject(projectIndex);
+    });
+
+    const closeBtn = document.createElement("button");
+    closeBtn.classList.add('update-button');
+    closeBtn.textContent = "Close";
+    closeBtn.addEventListener("click", () => {
+        closeEditForm();
+    });
+
+    editForm.appendChild(saveEditBtn);
+    editForm.appendChild(closeBtn); // Add the Close button
+    editProjectForm.classList.remove("hidden");
+}
+
+
+// Function to save edited project data
+function saveEditProject(projectIndex) {
+    const projectToUpdate = projectDataArray[projectIndex];
+    const inputElements = editProjectForm.querySelectorAll('input');
+
+    // Loop through the input elements and update the Project data
+    inputElements.forEach(input => {
+        const key = input.getAttribute("name");
+        const value = input.value;
+        projectToUpdate[key] = value;
+    });
+
+    // projectDataArray[projectIndex] = projectToUpdate;
+    console.log("Project update", projectToUpdate);
+    console.log("Index", projectDataArray[projectIndex]);
+
+    editProjectForm.classList.remove("hidden");
+
+    displayProjects(projectDataArray);
+}
+
+
+// Function to close the current edit form
+function closeEditForm() {
+    editProjectForm.classList.add("hidden");
+}
+
+// Function to Cancel a form
+cancelAddBtn.addEventListener("click", () => {
+    projectForm.reset();
+    addProjectForm.classList.add("hidden");
+});
+
+// Function to delete a project
+function deleteProject(projectIndex) {
+    projectDataArray.splice(projectIndex, 1);
+    displayProjects(projectDataArray);
+}
+
 
 //Search Project
 const searchInput = document.getElementById('search');
@@ -166,6 +270,7 @@ uniqueTags.forEach(tag => {
 });
 //=============================================================
 
+
 // Experience
 const expContainer = document.getElementById('exp-container');
 projectData.experience.forEach(experience => {
@@ -181,6 +286,7 @@ projectData.experience.forEach(experience => {
     expContainer.appendChild(experienceDiv);
 });
 //=============================================================
+
 
 // Education
 const eduContainer = document.getElementById('edu-container');
@@ -198,6 +304,7 @@ projectData.education.forEach(education => {
     eduContainer.appendChild(eduDiv);
 });
 // =======================================================
+
 
 // Skills
 const skillContainer = document.getElementById('skill-container');

@@ -397,3 +397,16 @@ input {
     margin-left: 15rem;
     margin-right: 15rem;
 }
+
+
+.hidden {
+    display: none;
+}
+
+.userForm {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: black;
+    border-style: groove;
+    padding: 18px;
+}

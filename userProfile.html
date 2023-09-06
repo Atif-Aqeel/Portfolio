@@ -7,9 +7,19 @@
     <title>Profile</title>
 
     <link rel="stylesheet" href="/styles/userProfile.css">
+
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <!-- Scripts -->
+    <script defer="true" type="module" src="/scripts/userProfile.js"></script>
+
+    <!-- <script defer="true" type="module" src="/scripts/index.js"> </script> -->
+
+    <!-- <script async type="module" src="/scripts/userProfile.js"></script> -->
+    <!-- <script async type="module" src="/scripts/index.js"> </script> -->
+
 
 </head>
 
@@ -21,9 +31,9 @@
                 <div class="side-bar">
                     <div class="user-info">
                         <img src="/assets/img_girl.jpg" alt=" image" class="userImage">
-                        <h4>Atif Aqeel</h4>
-                        <h4>Developer</h4>
-                        <h4>abc123@gmail.com</h4>
+                        <p id="userName"></p>
+                        <p id="userRole"></p>
+                        <p id="userEmail"></p>
                     </div>
                     <div class="side-menu">
                         <h4><a href="#project">Projects</a></h4>
@@ -35,7 +45,7 @@
 
                 <nav class="topnav">
                     <div class="nav-links">
-                        <a href="/admin.html">Admin</a>
+                        <a href="/userLogin.html">Admin</a>
                         <a href="/index.html">Portfolio</a>
                         <a href="/userLogin.html" id="logoutBtn">Logout</a>
                     </div>
@@ -55,14 +65,42 @@
                     </h2>
                     <section class="section-group">
                         <button class="update-button" id="add-project">Add Project</button>
+
                         <fieldset class="fieldset">
                             <h3>Project Info :</h3>
+
+                            <!-- Add Project Form -->
+                            <div id="add-project-form" class="hidden">
+                                <form id="project-form" class="userForm">
+                                    <label for="projectName">Project Name:</label>
+                                    <input type="text" id="projectName" required>
+                                    <label for="description">Description</label>
+                                    <input type="text" id="description" required>
+                                    <label for="date">Date:</label>
+                                    <input type="date" id="date" required>
+                                    <label for="framework">Framework:</label>
+                                    <input type="text" id="framework" required>
+                                    <label for="languages">Languages:</label>
+                                    <input type="text" id="languages" required>
+                                    <label for="tags">Tags:</label>
+                                    <input type="text" id="tags" required><br>
+                                    <button type="submit" class="update-button">Add New Project</button>
+                                    <button type="button" id="cancel-add" class="update-button">Cancel</button>
+                                </form>
+                            </div>
+
+                            <!-- Edit project Form -->
+                            <div id="edit-project-form" class="hidden userForm">
+                            </div>
+
+                            <!-- Display Json Data -->
                             <div class="content" id="project-content">
-                                <ul id="projects-list"></ul>
-                                <div id="data-container" class="data-container"></div>
+                                <div id="projects-list" class="data-container"></div>
                             </div>
                         </fieldset>
                     </section>
+
+
 
                     <!-- Experience Section -->
                     <h2 class="title" id="experience">Experience </h2>
@@ -106,8 +144,6 @@
         </div>
     </div>
 
-    <script type="module" src="/scripts/userProfile.js"></script>
-    <script src="/scripts/index.js"> </script>
 
 </body>
 

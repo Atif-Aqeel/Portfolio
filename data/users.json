@@ -3,86 +3,40 @@
         {
             "username": "abc",
             "email": "abc@gmail.com",
-            "password": 1234,
-            "number": "12345"
-        },
-        {
-            "username": "user1",
-            "email": "xyz@gmail.com",
             "password": "1234",
-            "number": "number"
+            "number": "12345",
+            "role": "user"
         },
         {
-            "username": "user2",
-            "email": "Atif@gmail.com",
+            "username": "admin",
+            "email": "admin@gmail.com",
+            "password": "1234",
+            "number": "number",
+            "role": "admin"
+        },
+        {
+            "username": "Atif",
+            "email": "atif@gmail.com",
             "password": "0000",
-            "number": "987654321"
+            "number": "987654321",
+            "role": "user"
         },
         {
             "username": "user3",
-            "email": "abc@gmail.com",
-            "password": "1234",
-            "number": "12345"
-        }
-    ],
-    "admin": [
+            "email": "abcd@gmail.com",
+            "password": "123",
+            "number": "12345",
+            "role": "user"
+        },
         {
             "email": "admin@gmail.com",
-            "password": "12345"
+            "password": "12345",
+            "role": "admin"
         },
         {
             "email": "admin2@gmail.com",
-            "password": "00000"
-        }
-    ],
-    "viewUsers": [
-        {
-            "username": "admin",
-            "email": "admin@example.com",
-            "role": "admin",
-            "number": "12345"
-        },
-        {
-            "username": "user1223",
-            "email": "user1@example.com",
-            "role": "user",
-            "number": "1234567890"
-        },
-        {
-            "username": "user2",
-            "email": "user2@example.com",
-            "role": "user",
-            "number": "number"
-        },
-        {
-            "username": "user3",
-            "email": "user3@example.com",
-            "role": "user",
-            "number": "987654321"
-        },
-        {
-            "username": "user3",
-            "email": "user3@example.com",
-            "role": "user",
-            "number": "987654321"
-        },
-        {
-            "username": "user3",
-            "email": "user3@example.com",
-            "role": "user",
-            "number": "987654321"
-        },
-        {
-            "username": "user3",
-            "email": "user3@example.com",
-            "role": "user",
-            "number": "987654321"
-        },
-        {
-            "username": "user3",
-            "email": "user3@example.com",
-            "role": "user",
-            "number": "987654321"
+            "password": "0000",
+            "role": "admin"
         }
     ]
 }

@@ -1,4 +1,42 @@
 import projects from '../data/profileData.json' assert { type: "json" };
+import usersData from '../data/users.json' assert { type: "json"};
+
+
+// Function that redirect to login Page
+window.onload = function () {
+    const userEmail = localStorage.getItem("userEmail");
+
+    if (!userEmail) {
+        localStorage.removeItem("userEmail");
+        location.href = "http://127.0.0.1:5500/userLogin.html";
+    }
+    else {
+        console.log("Email from local storage:", userEmail);
+        userData(userEmail);
+    }
+
+};
+
+// show user data of login user
+function userData(userEmail) {
+    // Find the user by email
+    const user = usersData.users.find(item => item.email === userEmail);
+
+    if (user) {
+        const name = document.getElementById("userName");
+
+        function appendAttribute(targetElement, attributeValue) {
+            const entryElement = document.createElement('p');
+            entryElement.textContent = ` ${Array.isArray(attributeValue) ? attributeValue.join(', ') : attributeValue}`;
+            targetElement.appendChild(entryElement);
+        }
+        appendAttribute(name, user.username);
+
+    } else {
+        document.getElementById("userName").textContent = `Mr. Nobody Portfolio `;
+    }
+}
+
 
 
 // 1. Scroll to About Section on Button Click:
@@ -72,7 +110,6 @@ window.addEventListener("click", (event) => {
     const modal = document.getElementById("projectModal");
     if (event.target === modal) {
         modal.style.display = "none";
-
     }
 });
 // =================================================================

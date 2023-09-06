@@ -6,12 +6,7 @@
             "Date": "8/30/2023",
             "Technology": "WEB",
             "Languages": "Javascript",
-            "Tags": [
-                "JS",
-                " Javascript",
-                " HTML",
-                " CSS"
-            ]
+            "Tags": "JS, Javascript, HTML, CSS"
         },
         {
             "Title": "BDS",
@@ -24,34 +19,6 @@
                 " Express",
                 " MongoDB"
             ],
-            "Tags": [
-                "reactjs",
-                " Javascript",
-                " nodejs",
-                " mongoDB",
-                " expressjs"
-            ]
-        },
-        {
-            "Title": "E-Commerce",
-            "Description": "Commerce Website",
-            "Date": "8/30/2023"
-        },
-        {
-            "Title": "Block Chain",
-            "Description": "Block Chain Website",
-            "Date": "8/30/2023",
-            "Languages": [
-                "React",
-                " Node",
-                " Express",
-                " MongoDB"
-            ]
-        },
-        {
-            "Title": "Mobile App",
-            "Description": "Mobile App Testing",
-            "Date": "8/30/2023",
             "Tags": [
                 "reactjs",
                 " Javascript",
